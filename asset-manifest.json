@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Hangar/static/css/main.5b752e9c.chunk.css",
+    "main.js": "/Hangar/static/js/main.c753cfef.chunk.js",
+    "main.js.map": "/Hangar/static/js/main.c753cfef.chunk.js.map",
+    "runtime-main.js": "/Hangar/static/js/runtime-main.f2a9ecf9.js",
+    "runtime-main.js.map": "/Hangar/static/js/runtime-main.f2a9ecf9.js.map",
+    "static/js/2.4dd10535.chunk.js": "/Hangar/static/js/2.4dd10535.chunk.js",
+    "static/js/2.4dd10535.chunk.js.map": "/Hangar/static/js/2.4dd10535.chunk.js.map",
+    "index.html": "/Hangar/index.html",
+    "precache-manifest.77eefb30a617474e50440b3b867abeb8.js": "/Hangar/precache-manifest.77eefb30a617474e50440b3b867abeb8.js",
+    "service-worker.js": "/Hangar/service-worker.js",
+    "static/css/main.5b752e9c.chunk.css.map": "/Hangar/static/css/main.5b752e9c.chunk.css.map",
+    "static/js/2.4dd10535.chunk.js.LICENSE.txt": "/Hangar/static/js/2.4dd10535.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f2a9ecf9.js",
+    "static/js/2.4dd10535.chunk.js",
+    "static/css/main.5b752e9c.chunk.css",
+    "static/js/main.c753cfef.chunk.js"
+  ]
+}
