@@ -1,0 +1,101 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes moveUp {
+    from {
+        top: 48%;
+    }
+    
+    to {
+        top: 50px;
+    }
+}
+
+.container {
+    position: relative;
+    padding-top: 140px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/resources/stars.png');
+    background-size: cover;
+
+    &--home {
+        color: white;
+    }
+}
+
+.title {
+    position: absolute;
+    font-size: 4.4vw;
+    font-weight: 300;
+    letter-spacing: 0.73em;
+    margin-left: 0.35em;
+    z-index: 2;
+    top: 50px;
+    color: white;
+}
+
+.title--animation {
+    animation: moveUp 1s ease-out .2s 1 normal both;
+}
+
+.link {
+    width: 30%;
+    height: 60px;
+    background-color: white;
+    color: #040917;
+    text-align: center;
+    line-height: 60px;
+    margin: 20px 0;
+    border-radius: 30px;
+    letter-spacing: 0.21em;
+    text-decoration: none;
+    font-size: 18px;
+    animation: fadeIn .6s ease-out 1.2s 1 normal both;
+}
+
+.link:hover {
+    background-color: #E5E5E5;
+}
+
+.link--dark {
+    color: white;
+    background-color: #040917;
+    box-shadow: 0px -10px 17px rgba(255, 255, 255, 0.1), 5px 7px 28px rgba(0, 0, 0, 0.63);
+}
+
+.link--dark:hover {
+    background-color: #060E24;
+}
+
+.planet {
+    position: absolute;
+    background: #040917;
+    top: 200px;
+    width: 20vw;
+    height: 20vw;
+    box-shadow: 0px -130px 105px rgba(255, 255, 255, 0.25);
+    border-radius: 10vw;
+}
+
+.sun {
+    position: absolute;
+    top: 160px;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 2.5vw;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 250px rgba(255, 255, 255, 0.25);
+    filter: blur(6px);
+}

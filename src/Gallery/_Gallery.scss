@@ -1,0 +1,22 @@
+.title--link {
+    text-decoration: none;
+}
+
+.gallery {
+
+    &__btn {
+        position: absolute;
+        background: none;
+        border: none;
+        background-image: url('/resources/arrow.svg');
+        background-size: cover;
+        width: 30px;
+        height: 55px;
+        left: 8vw;
+
+        &--right {
+            left: 90vw;
+            transform: rotate(180deg);
+        }
+    }
+}

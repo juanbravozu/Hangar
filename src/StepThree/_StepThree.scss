@@ -1,0 +1,54 @@
+.creator {
+
+    &__end {
+        text-decoration: none;
+        margin: 0 auto;
+        display: block;
+        width: fit-content;
+        margin-top: 50px;
+
+        & .MuiButton-contained {
+            height: 45px;
+
+            & .MuiButton-label {
+                letter-spacing: .3em;
+            }
+        }
+    }
+
+    &__textInput {
+        position: relative;
+        transition: all .2s ease-out;
+        margin-top: 15px;
+
+        &--focused {
+            margin-top: 40px;
+
+            & label {
+                transform: translate(0, -25px) !important;
+                color: $text-black !important;
+            }
+        }
+
+        & label {
+            position: absolute;
+            transform: translate(15px, 15px);
+            transition: transform .2s ease-out;
+            color: $gray;
+            font-size: 14px;
+        }
+
+        & input {
+            width: 100%;
+            height: 45px;
+            padding: 15px;
+            box-shadow: inset -2px 2px 8px rgba(0, 0, 0, 0.15);
+            border: none;
+
+            &:focus {
+                outline: none;
+                box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.25);
+            }
+        }
+    }
+}

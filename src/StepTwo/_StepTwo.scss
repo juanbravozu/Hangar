@@ -1,0 +1,24 @@
+.MuiSwitch-colorSecondary.Mui-checked {
+    color: #2b478a !important;
+}
+
+.MuiSwitch-colorSecondary.Mui-checked + .MuiSwitch-track {
+    background-color: #2b478a !important;
+}
+
+.creator {
+
+    &__flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__option {
+        margin: 15px 0;
+    }
+}
+
+.twitter-picker {
+    margin: 5px 0;
+}

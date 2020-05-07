@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+$text_black: #272727;
+$lightGray: #DEDEDE;
+$gray: #A8A8A8;
+
+@import './App/App';
+@import './Gallery/Gallery';
+@import './Home/Home';
+@import './Creator/Creator';
+@import './StepOne/StepOne';
+@import './StepTwo/StepTwo';
+@import './StepThree/StepThree';
