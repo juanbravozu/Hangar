@@ -7,13 +7,13 @@ function SpaceShip(props) {
 
     let shipNameClass = 'ship__name';
 
-    if(props.shape == 1) {
+    if(props.shape === 1) {
         shipNameClass += ' ship__name--ship1';
-    } else if(props.shape == 2) {
+    } else if(props.shape === 2) {
         shipNameClass += ' ship__name--ship2';
-    } else if(props.shape == 3) {
+    } else if(props.shape === 3) {
         shipNameClass += ' ship__name--ship3';
-    } else if(props.shape == 4) {
+    } else if(props.shape === 4) {
         shipNameClass += ' ship__name--ship4';
     }  
 

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Button } from '@material-ui/core';
+import { v4 as uuidv4 } from 'uuid';
 
 function StepThree(props) {
 
@@ -10,9 +11,7 @@ function StepThree(props) {
     function handleName(event) {
         if(event.target.value.length <= 7) {
             props.setName(event.target.value);
-        }
-        
-        
+        }           
     }
 
     function handleFocus(event) {
@@ -26,7 +25,12 @@ function StepThree(props) {
     }
 
     function handleChangeBg(event) {
-        props.setBackground(event.target.closest('div').getAttribute('data-bg'));
+        props.setBackground(parseInt(event.target.closest('div').getAttribute('data-bg')));
+    }
+
+    function handleFinishButton() {
+        props.setId(uuidv4());
+        props.handleFinish();
     }
 
     if(props.name && !focused) {
@@ -46,28 +50,28 @@ function StepThree(props) {
 
                 <div className='creator__buttonsContainer'>
                     <div data-bg={1} onClick={handleChangeBg} 
-                    className={props.background == 1 ? 'creator__btn creator__btn--selected' : 'creator__btn'}>
+                    className={props.background === 1 ? 'creator__btn creator__btn--selected' : 'creator__btn'}>
                         <img src='/resources/ship1Icon.png' alt=''/>
                     </div>
 
                     <div data-bg={2} onClick={handleChangeBg} 
-                    className={props.background == 2 ? 'creator__btn creator__btn--selected' : 'creator__btn'}>
+                    className={props.background === 2 ? 'creator__btn creator__btn--selected' : 'creator__btn'}>
                         <img src='/resources/ship2Icon.png' alt=''/>
                     </div>
 
                     <div data-bg={3} onClick={handleChangeBg} 
-                    className={props.background == 3 ? 'creator__btn creator__btn--selected' : 'creator__btn'}>
+                    className={props.background === 3 ? 'creator__btn creator__btn--selected' : 'creator__btn'}>
                         <img src='/resources/ship3Icon.png' alt=''/>
                     </div>
 
                     <div data-bg={4} onClick={handleChangeBg} 
-                    className={props.background == 4 ? 'creator__btn creator__btn--selected' : 'creator__btn'}>
+                    className={props.background === 4 ? 'creator__btn creator__btn--selected' : 'creator__btn'}>
                         <img src='/resources/ship4Icon.png' alt=''/>
                     </div>
                 </div>
             </div>
 
-            <Link className="creator__end" to="/galeria">
+            <Link className="creator__end" to="/" onClick={handleFinishButton}>
                 <Button variant="contained" color="primary">Terminar nave</Button>
             </Link>
         </div>
@@ -79,6 +83,8 @@ StepThree.propTypes = {
     setName: PropTypes.func,
     background: PropTypes.number,
     setBackground: PropTypes.func,
+    setId: PropTypes.func,
+    handleFinish: PropTypes.func,
 }
 
 export default StepThree;
