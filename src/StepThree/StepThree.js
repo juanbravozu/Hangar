@@ -8,7 +8,10 @@ function StepThree(props) {
     const [ focused, setFocused ] = React.useState(false);
 
     function handleName(event) {
-        props.setName(event.target.value);
+        if(event.target.value.length <= 7) {
+            props.setName(event.target.value);
+        }
+        
         
     }
 

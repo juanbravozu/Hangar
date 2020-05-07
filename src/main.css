@@ -96,6 +96,10 @@
   color: white;
 }
 
+.container--noStars {
+  background-image: none;
+}
+
 .title {
   position: absolute;
   font-size: 4.4vw;
@@ -173,6 +177,7 @@
   display: flex;
   width: 100%;
   height: 100%;
+  overflow-y: hidden;
 }
 
 .creator {
@@ -215,6 +220,35 @@
 
 .creator__step {
   color: #272727;
+}
+
+.fallingStars {
+  position: absolute;
+  height: 100%;
+  width: 77%;
+  -webkit-animation: slide 60s linear infinite;
+          animation: slide 60s linear infinite;
+  background-image: url("/resources/starRain.png");
+  background-size: auto;
+  background-repeat: repeat-y;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: 4118px;
+  }
+}
+
+@keyframes slide {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: 4118px;
+  }
 }
 
 .creator__step {
@@ -350,10 +384,48 @@
 
 .ship {
   position: relative;
+  top: -50px;
 }
 
 .ship__details {
   position: absolute;
   bottom: 0;
+}
+
+.ship__name {
+  position: absolute;
+  font-family: 'Syncopate', sans-serif;
+  font-weight: 700;
+  color: #272727;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+  text-align: center;
+  font-size: 14px;
+}
+
+.ship__name--ship1 {
+  -webkit-transform: rotate3d(0, 0.3, 1, 90deg);
+          transform: rotate3d(0, 0.3, 1, 90deg);
+  top: 185px;
+  left: 100px;
+}
+
+.ship__name--ship2 {
+  top: 285px;
+  left: 20px;
+}
+
+.ship__name--ship3 {
+  -webkit-transform: rotate3d(0, 0.3, 1, 90deg);
+          transform: rotate3d(0, 0.3, 1, 90deg);
+  top: 140px;
+  left: 105px;
+}
+
+.ship__name--ship4 {
+  -webkit-transform: rotate3d(0, 0.3, 1, 55deg);
+          transform: rotate3d(0, 0.3, 1, 55deg);
+  top: 185px;
+  left: 65px;
 }
 /*# sourceMappingURL=main.css.map */

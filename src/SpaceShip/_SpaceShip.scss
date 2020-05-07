@@ -1,12 +1,42 @@
 .ship {
     position: relative;
+    top: -50px;
 
     &__details {
         position: absolute;
         bottom: 0;
+    }
 
-        &--rocket {
+    &__name {
+        position: absolute;
+        font-family: 'Syncopate', sans-serif;
+        font-weight: 700;
+        color: $text_black;
+        transform-origin: left center;
+        text-align: center;
+        font-size: 14px;
 
+        &--ship1 {
+            transform: rotate3d(0, .3, 1, 90deg);
+            top: 185px;
+            left: 100px;
+        }
+
+        &--ship2 {
+            top: 285px;
+            left: 20px;
+        }
+
+        &--ship3 {
+            transform: rotate3d(0, .3, 1, 90deg);
+            top: 140px;
+            left: 105px;
+        }
+
+        &--ship4 {
+            transform: rotate3d(0, .3, 1, 55deg);
+            top: 185px;
+            left: 65px;
         }
     }
 }

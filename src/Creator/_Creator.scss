@@ -2,6 +2,7 @@
     display: flex;
     width: 100%;
     height: 100%;
+    overflow-y: hidden;
 }
 
 .creator {
@@ -41,3 +42,22 @@
 
 
 }
+
+.fallingStars {
+    position: absolute;
+    height: 100%;
+    width: 77%;
+    animation: slide 60s linear infinite;
+    background-image: url('/resources/starRain.png');
+    background-size: auto;
+    background-repeat: repeat-y;
+}
+
+@keyframes slide{
+    0%{
+      background-position-y: 0;
+    }
+    100%{
+        background-position-y: 4118px;
+    }
+  }

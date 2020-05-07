@@ -31,7 +31,8 @@ function Creator(props) {
 
     return (
         <div className="flexContainer">
-            <div className="container">
+            <div className="fallingStars"></div>
+            <div className="container container--noStars">
                 <SpaceShip shape={shape}
                 primaryColor={primaryColor}
                 secondaryColor={secondaryColor}
@@ -40,6 +41,8 @@ function Creator(props) {
                 name={name}
                 background={background}/>
             </div>
+
+            
 
             <div className="creator">
                 

@@ -7,7 +7,7 @@ function BaseShip(props) {
     const base = props.primaryColor;
     const dark = LightenDarkenColor(props.primaryColor, -20);
     const darker = LightenDarkenColor(props.primaryColor, -50);
-    console.log(LightenDarkenColor(props.primaryColor, -50));
+    
     return (
         <div className="ship__base">
             {props.shape == 1 && 
