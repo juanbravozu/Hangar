@@ -5,6 +5,19 @@ import { Switch } from '@material-ui/core';
 
 function StepTwo(props) {
 
+    const colorOptions = [
+        '#FF6900',
+        '#FCB900',
+        '#7BDCB5',
+        '#55C96A',
+        '#8ED1FC',
+        '#54C1DE',
+        '#ABB8C3',
+        '#EB144C',
+        '#F78DA7',
+        '#9900EF'
+    ];
+
     function handleSwitch(event) {
         props.setFireActivated(event.target.checked);
     }
@@ -26,13 +39,13 @@ function StepTwo(props) {
             <div className="creator__option">
                 <h3>Color principal</h3>
 
-                <TwitterPicker triangle="hide" color={props.primaryColor} onChangeComplete={handlePrimary}/>
+                <TwitterPicker colors={colorOptions} triangle="hide" color={props.primaryColor} onChangeComplete={handlePrimary}/>
             </div>
 
             <div className="creator__option">
                 <h3>Color secundario</h3>
 
-                <TwitterPicker triangle="hide" color={props.secondaryColor} onChangeComplete={handleSecondary}/>
+                <TwitterPicker colors={colorOptions} triangle="hide" color={props.secondaryColor} onChangeComplete={handleSecondary}/>
             </div>
 
             <div className="creator__option">
@@ -43,7 +56,7 @@ function StepTwo(props) {
                     inputProps={{ 'aria-label': 'primary checkbox' }}/>
                 </div>                
 
-                {props.fireActivated && <TwitterPicker triangle="hide" color={props.fireColor} onChangeComplete={handleFireColor}/>}
+                {props.fireActivated && <TwitterPicker colors={colorOptions} triangle="hide" color={props.fireColor} onChangeComplete={handleFireColor}/>}
                 
             </div>
 

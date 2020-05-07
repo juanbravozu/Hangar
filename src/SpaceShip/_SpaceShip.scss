@@ -1,0 +1,12 @@
+.ship {
+    position: relative;
+
+    &__details {
+        position: absolute;
+        bottom: 0;
+
+        &--rocket {
+
+        }
+    }
+}
